@@ -2,10 +2,13 @@ package com.example.cuadrosdedialogo;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -47,6 +50,39 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Sin borrar informacion", Toast.LENGTH_SHORT).show();
                     }
                 }).show();
-
     }
+
+    public void mostrarCuadroPersonalizado(View view) {
+        //Crear instancia de cuadro de dialogo Alert
+        AlertDialog.Builder cuadroDP = new AlertDialog.Builder(MainActivity.this, R.style.Theme_CuadrosDeDialogo);
+        View vistaCuadro = LayoutInflater.from(MainActivity.this).inflate(
+            R.layout.dialogo_personal,(ConstraintLayout)findViewById (R.id.contenedor));
+        //
+        cuadroDP.setView(vistaCuadro);
+        //
+        ((EditText) vistaCuadro.findViewById(R.id.edtMensaje)).setText("Cancela vuelo?");
+        ((Button) vistaCuadro.findViewById(R.id.btnAceptar)).setText("Si");
+        ((Button) vistaCuadro.findViewById(R.id.btnCancelar)).setText("No");
+        //
+        final AlertDialog alertDialog = cuadroDP.create();
+        //
+        Button aceptar = vistaCuadro. findViewById(R.id.btnAceptar);
+        aceptar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+                Toast.makeText(getApplicationContext(), "VueloCanceladO", Toast.LENGTH_SHORT);
+            }
+        });
+
+        Button cancelar = vistaCuadro.findViewById(R.id.btnCancelar);
+        cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+                Toast.makeText(getApplicationContext(), "Vuelo sin cambvios", Toast.LENGTH_SHORT);
+            }
+        });
+        alertDialog.show();
+    } //mostrarCuadroPersonalizado
 }
