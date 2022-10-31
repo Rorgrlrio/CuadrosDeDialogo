@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/CuadrosDeDialogo/app/src/main/res/layout/activity_calendar.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CuadrosDeDialogo/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CuadrosDeDialogo/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CuadrosDeDialogo/app/src/main/res/layout/dialogo_personal.xml" value="0.1" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/CuadrosDeDialogo/app/src/main/res/layout/dialogo_personalizado.xml" value="0.253125" />
       </map>
     </option>

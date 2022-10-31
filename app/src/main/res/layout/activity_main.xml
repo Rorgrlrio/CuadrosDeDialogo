@@ -48,27 +48,32 @@
         android:layout_width="219dp"
         android:layout_height="658dp"
         android:layout_marginStart="1dp"
+        android:layout_marginEnd="44dp"
         android:layout_marginBottom="3dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCalendario"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/btnAlertDialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="mostrarCuadroBasico"
             android:text="Alert Dialog" />
 
         <Button
             android:id="@+id/btnAlertPerso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="mostrarCuadroPersonalizado"
             android:text="Alert Personalizado" />
 
         <Button
             android:id="@+id/btnFecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="mostrarCuadroFecha"
             android:text="Fecha" />
 
         <EditText
@@ -83,6 +88,7 @@
             android:id="@+id/btnHora"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="mostrarCuadroHora"
             android:text="Hora" />
 
         <EditText
@@ -100,6 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="18dp"
         android:layout_marginBottom="605dp"
+        android:onClick="mostrarCalendario"
         android:text="Calendario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
